@@ -72,7 +72,7 @@ export default function FittingsScreen() {
               key={t.key}
               style={[styles.tile, { borderLeftColor: t.color }]}
               activeOpacity={0.7}
-              onPress={() => router.push({ pathname: '/fittings/tube/[series]', params: { series: t.key } })}
+              onPress={() => router.push({ pathname: '/(tabs)/tube/[series]', params: { series: t.key } })}
             >
               <Text style={[styles.tileTitle, { color: t.color }]}>{t.label}</Text>
               <Text style={styles.tileSub}>{t.sub}</Text>
