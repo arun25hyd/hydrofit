@@ -5,6 +5,7 @@ import {
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import { Colors } from '../../constants/Colors';
+import { AdBanner } from '../../components/AdBanner';
 
 const STANDARDS = [
   { key: 'JIC',        label: 'JIC 37°',         sub: '37° flare · SAE J514',    count: 482,  color: Colors.jic   },
@@ -83,6 +84,8 @@ export default function FittingsScreen() {
 
         <View style={styles.bottomSpacer} />
       </ScrollView>
+      {/* Banner ad — bottom of screen */}
+      <AdBanner />
     </SafeAreaView>
   );
 }
