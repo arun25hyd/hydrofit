@@ -33,4 +33,6 @@ export const Colors = {
   bspp:      '#0891b2',   // cyan
   flange:    '#d97706',   // amber
   din24:     '#f97316',   // orange (tube fittings)
+  // Rigid fittings
+  bsp:       '#0891b2',   // cyan (same as bspp)
 };

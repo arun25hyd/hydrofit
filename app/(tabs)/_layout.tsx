@@ -41,6 +41,14 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
+        name="rigid"
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <TabIcon focused={focused} label="Rigid" icon="⬢" />
+          ),
+        }}
+      />
+      <Tabs.Screen
         name="hoses"
         options={{
           tabBarIcon: ({ focused }) => (
