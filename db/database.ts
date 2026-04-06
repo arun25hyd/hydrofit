@@ -18,8 +18,12 @@ async function initTables(db: SQLite.SQLiteDatabase): Promise<void> {
 }
 
 export async function isSeeded(db: SQLite.SQLiteDatabase): Promise<boolean> {
-  const row = await db.getFirstAsync<{ count: number }>(
+  const hf = await db.getFirstAsync<{ count: number }>(
     'SELECT COUNT(*) as count FROM hose_fittings'
   );
-  return (row?.count ?? 0) > 0;
+  const ho = await db.getFirstAsync<{ count: number }>(
+    'SELECT COUNT(*) as count FROM hoses'
+  );
+  // Re-seed if hoses table has sample data only (< 10 rows)
+  return (hf?.count ?? 0) > 0 && (ho?.count ?? 0) >= 10;
 }
