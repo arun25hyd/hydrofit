@@ -90,7 +90,7 @@ export default function TubeSeriesScreen() {
       ) : (
         <FlatList
           data={fittings}
-          keyExtractor={item => `${item.tube_od_mm}-${item.thread_size}`}
+          keyExtractor={(item, index) => `${item.tube_od_mm}-${item.thread_size}-${index}`}
           ListHeaderComponent={() => (
             <View>
               {/* Fitting type selector */}

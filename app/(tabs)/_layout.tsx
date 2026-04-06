@@ -72,6 +72,10 @@ export default function TabLayout() {
           ),
         }}
       />
+      {/* Hide nested folder routes from tab bar */}
+      <Tabs.Screen name="fittings/[standard]" options={{ href: null }} />
+      <Tabs.Screen name="fittings/detail" options={{ href: null }} />
+      <Tabs.Screen name="tube/[series]" options={{ href: null }} />
     </Tabs>
   );
 }
